@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aegis-m"
+version = "0.1.0"
+description = "Black-box security auditor for OpenAI-compatible relays"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "AEGIS-M"}]
+dependencies = []
+
+[project.scripts]
+aegis-m = "aegism.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["aegism*"]
+
+[tool.setuptools.package-data]
+aegism = ["webui/*.html", "webui/*.css", "webui/*.js"]
